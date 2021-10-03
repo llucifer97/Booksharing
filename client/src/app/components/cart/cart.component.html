@@ -1,0 +1,36 @@
+
+<mat-card  class="example-card">
+  <img mat-card-sm-image src="https://images-na.ssl-images-amazon.com/images/I/81P3sTHScaL.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-header>
+    <mat-card-title>{{book.title}}</mat-card-title>
+      <mat-card-subtitle>Author : {{book.author}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-placeholder><B>Genre</B> : {{book.genre}}</mat-placeholder> <br>
+    <mat-placeholder><B>Price</B> : {{book.price}}</mat-placeholder><br>
+    <mat-placeholder><B>Year</B> : {{book.year}}</mat-placeholder><br>
+    <mat-placeholder><B>Language</B> : {{book.language}}</mat-placeholder><br>
+    <mat-placeholder><B>Rating</B> : {{book.rating}}</mat-placeholder><br>
+
+  </mat-card-content>
+
+</mat-card>
+
+
+<div class="input-group input-group-lg"  style="margin-top: 10px;">
+  <span class="input-group-text" id="inputGroup-sizing-lg">Count</span>
+  <input type="text" class="form-control" aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-lg" value=1  [(ngModel)] = "count">
+</div>
+
+
+<div class="input-group input-group-lg"  style="margin-top: 10px;">
+  <span class="input-group-text" id="inputGroup-sizing-lg">Rating</span>
+  <input type="text" class="form-control" aria-label="Sizing example input"
+       aria-describedby="inputGroup-sizing-lg" value="0"  [(ngModel)] = "data.rating">
+</div>
+
+<h3 style="color: blueviolet;"> YOUR TOTAL : {{data.total}}</h3>
+
+  <button style="margin-top: 20px;" (click)="onSubmit()" type="button" class="btn btn-danger">Submit</button>
+  <button style="margin-top: 20px; margin-left: 50px;" type="button" (click)="seeAllTransaction()" class="btn btn-success">Checkout</button>
